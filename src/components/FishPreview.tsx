@@ -62,18 +62,20 @@ function FishPreview() {
         <div id="fish_preview_children">
           {/* Layered Accessories */}
           <img
-            src="/defaultFishBody.webp"
+            src="./defaultFishBody.webp"
             title="Fish body"
             style={{
               filter: recolorFilter(hexToRgb(fishData.bodyColor)),
             }}
           />
-          <img src="/defaultFishEyes.webp" title="Fish eyes" />
+          <img src="./defaultFishEyes.webp" title="Fish eyes" />
 
           {fishData.mouth != "none" && (
             <img
               src={
-                "/cosmetic_images_postprocess/mouth/" + fishData.mouth + ".webp"
+                "./cosmetic_images_postprocess/mouth/" +
+                fishData.mouth +
+                ".webp"
               }
               title={"Fish mouth " + fishData.mouth}
             />
@@ -81,7 +83,9 @@ function FishPreview() {
 
           {fishData.fin != "none" && (
             <img
-              src={"/cosmetic_images_postprocess/fin/" + fishData.fin + ".webp"}
+              src={
+                "./cosmetic_images_postprocess/fin/" + fishData.fin + ".webp"
+              }
               title={"Fish fin " + fishData.fin}
               style={{
                 filter: recolorFilter(hexToRgb(fishData.finColor)),
@@ -91,7 +95,9 @@ function FishPreview() {
 
           {fishData.hat != "none" && (
             <img
-              src={"/cosmetic_images_postprocess/hat/" + fishData.hat + ".webp"}
+              src={
+                "./cosmetic_images_postprocess/hat/" + fishData.hat + ".webp"
+              }
               title={"Fish hat " + fishData.hat}
               style={{
                 filter: recolorFilter(hexToRgb(fishData.hatColor)),
@@ -102,7 +108,7 @@ function FishPreview() {
           {fishData.accessory != "none" && (
             <img
               src={
-                "/cosmetic_images_postprocess/accessory/" +
+                "./cosmetic_images_postprocess/accessory/" +
                 fishData.accessory +
                 ".webp"
               }
@@ -116,7 +122,7 @@ function FishPreview() {
           {fishData.eyewear != "none" && (
             <img
               src={
-                "/cosmetic_images_postprocess/eyewear/" +
+                "./cosmetic_images_postprocess/eyewear/" +
                 fishData.eyewear +
                 ".webp"
               }
@@ -129,7 +135,7 @@ function FishPreview() {
           {fishData.effect != "none" && (
             <img
               src={
-                "/cosmetic_images_postprocess/effect/" +
+                "./cosmetic_images_postprocess/effect/" +
                 fishData.effect +
                 ".webp"
               }
