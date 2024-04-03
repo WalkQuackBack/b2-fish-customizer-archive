@@ -6,27 +6,58 @@ import CopyToClipboard from "./CopyToClipboardBtn";
 
 function FishCommandOutput() {
   const fishData: {
-    bodyColor: string;
-    hatColor: string;
-    hat: string;
-    accessoryColor: string;
     accessory: string;
-    eyewearColor: string;
-    eyewear: string;
-    mouth: string;
-    finColor: string;
-    fin: string;
+    accessoryColorPrimary: string;
+    accessoryColorSecondary: string;
+    accessoryColorTertiary: string;
+    bodyColor: string;
     effect: string;
+    eyewear: string;
+    eyewearColorPrimary: string;
+    eyewearColorSecondary: string;
+    eyewearColorTertiary: string;
+    fin: string;
+    finColorPrimary: string;
+    finColorSecondary: string;
+    finColorTertiary: string;
+    hat: string;
+    hatColorPrimary: string;
+    hatColorSecondary: string;
+    hatColorTertiary: string;
+    mouth: string;
   } = useSelector(selectFishData);
 
   const selectionArray = ["body:" + fishData.bodyColor];
-  selectionArray.push("hat:" + fishData.hat + fishData.hatColor);
   selectionArray.push(
-    "accessory:" + fishData.accessory + fishData.accessoryColor
+    "hat:" +
+      fishData.hat +
+      fishData.hatColorPrimary +
+      fishData.hatColorSecondary +
+      fishData.hatColorTertiary
   );
-  selectionArray.push("eyewear:" + fishData.eyewear + fishData.eyewearColor);
+
+  selectionArray.push(
+    "accessory:" +
+      fishData.accessory +
+      fishData.accessoryColorPrimary +
+      fishData.accessoryColorSecondary +
+      fishData.accessoryColorTertiary
+  );
+  selectionArray.push(
+    "eyewear:" +
+      fishData.eyewear +
+      fishData.eyewearColorPrimary +
+      fishData.eyewearColorSecondary +
+      fishData.eyewearColorTertiary
+  );
   selectionArray.push("mouth:" + fishData.mouth);
-  selectionArray.push("fin:" + fishData.fin + fishData.finColor);
+  selectionArray.push(
+    "fin:" +
+      fishData.fin +
+      fishData.finColorPrimary +
+      fishData.finColorSecondary +
+      fishData.finColorTertiary
+  );
   selectionArray.push("effect:" + fishData.effect);
 
   const output = "!fish " + selectionArray.join(",");

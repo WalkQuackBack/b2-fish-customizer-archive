@@ -20,7 +20,6 @@ function App() {
           theme.darkAlgorithm,
       }}
     >
-      <HexColorApplet />
       <div id="side_panel">
         <CustomizationPanel />
       </div>
