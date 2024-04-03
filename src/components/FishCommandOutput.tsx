@@ -72,9 +72,7 @@ function FishCommandOutput() {
           }}
         >
           <Input value={output} readOnly></Input>
-          <CopyToClipboard
-            copyText={`!fish body:${fishData.bodyColor},hat:${fishData.hat}${fishData.hatColor},accessory:${fishData.accessory}${fishData.accessoryColor},eyewear:${fishData.eyewear}${fishData.eyewearColor},mouth:${fishData.mouth},fin:${fishData.fin}${fishData.finColor},effect:${fishData.effect}`}
-          />
+          <CopyToClipboard copyText={output} />
         </div>
       </div>
     </>

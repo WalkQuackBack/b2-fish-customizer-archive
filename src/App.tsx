@@ -1,6 +1,5 @@
 import "./App.css";
 
-import HexColorApplet from "./components/HexColorApplet";
 import CustomizationPanel from "./components/CustomizationPanel";
 import FishPreview from "./components/FishPreview";
 import FishCommandOutput from "./components/FishCommandOutput";

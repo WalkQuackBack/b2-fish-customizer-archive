@@ -10,6 +10,7 @@ import fishDataType from "../fishDataType";
 import customizationData from "../customizationData";
 
 function FormComponent(props: {
+  // TODO: if anyone has a better way to define the types please let me know
   component: "color" | "dropdown";
   label: string;
   identifier: string;
@@ -22,14 +23,26 @@ function FormComponent(props: {
   switch (props.component) {
     case "color":
       // Leaving the type errors here I'm too tired to fix them 😓
-      const selfData = customizationData[props.identifier];
+      // TODO: actually fix the types and not just @ts-ignore them
+      const selfData: {
+        defaultValue: any;
+        label: string;
+        selectionOptions: string[];
+        selectionOptionMetadata: {};
+        linkedTo?: string;
+        colorType?: string;
+        // @ts-ignore TODO: fix types
+      } = customizationData[props.identifier];
+
       const selectionOptionMetadata =
         (selfData.linkedTo &&
+          // @ts-ignore TODO: fix types
           customizationData[selfData.linkedTo].selectionOptionMetadata) ||
         undefined;
 
       const colorPickerDisabled =
         (selfData.linkedTo &&
+          // @ts-ignore TODO: fix types
           !selectionOptionMetadata[fishData[selfData.linkedTo]].find(
             (element: string) => element == selfData.colorType
           )) ||

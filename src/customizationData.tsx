@@ -62,6 +62,7 @@ const customizationData = {
       soldier: ["primary"],
       jameson: ["primary", "secondary"],
     },
+    linkedTo: undefined,
   },
   hatColorPrimary: {
     defaultValue: "#FF6600",
@@ -108,6 +109,7 @@ const customizationData = {
       handlebar: ["primary"],
       b2: ["primary"],
     },
+    linkedTo: undefined,
   },
 
   accessoryColorPrimary: {
@@ -146,6 +148,7 @@ const customizationData = {
       goggles: ["primary"],
       eyelashes: ["nocolor"],
     },
+    linkedTo: undefined,
   },
   eyewearColorPrimary: {
     defaultValue: "#FF6600",
@@ -183,6 +186,7 @@ const customizationData = {
       small: ["nocolor"],
       morty: ["nocolor"],
     },
+    linkedTo: undefined,
   },
 
   fin: {
@@ -195,6 +199,7 @@ const customizationData = {
       jewel: ["primary"],
       gills: ["primary"],
     },
+    linkedTo: undefined,
   },
   finColorPrimary: {
     defaultValue: "#8C1C13",
@@ -232,6 +237,7 @@ const customizationData = {
       bubbles: ["nocolor"],
       storm: ["nocolor"],
     },
+    linkedTo: undefined,
   },
 };
 
