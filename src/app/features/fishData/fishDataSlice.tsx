@@ -1,34 +1,54 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+import customizationData from "../../../customizationData";
 export const fishDataSlice = createSlice({
   name: "fishData",
   initialState: {
-    bodyColor: "#FF0000",
-    hatColor: "#fffd16",
-    hat: "none",
-    accessoryColor: "#fffd16",
-    accessory: "none",
-    eyewearColor: "#fffd16",
-    eyewear: "none",
-    mouth: "default",
-    finColor: "#fffd16",
-    fin: "none",
-    effect: "none",
+    accessory: customizationData.accessory.defaultValue,
+    accessoryColorPrimary: customizationData.accessoryColorPrimary.defaultValue,
+    accessoryColorSecondary:
+      customizationData.accessoryColorSecondary.defaultValue,
+    accessoryColorTertiary:
+      customizationData.accessoryColorTertiary.defaultValue,
+    bodyColor: customizationData.bodyColor.defaultValue,
+    effect: customizationData.effect.defaultValue,
+    eyewear: customizationData.eyewear.defaultValue,
+    eyewearColorPrimary: customizationData.eyewearColorPrimary.defaultValue,
+    eyewearColorSecondary: customizationData.eyewearColorSecondary.defaultValue,
+    eyewearColorTertiary: customizationData.eyewearColorTertiary.defaultValue,
+    fin: customizationData.fin.defaultValue,
+    finColorPrimary: customizationData.finColorPrimary.defaultValue,
+    finColorSecondary: customizationData.finColorSecondary.defaultValue,
+    finColorTertiary: customizationData.finColorTertiary.defaultValue,
+    hat: customizationData.hat.defaultValue,
+    hatColorPrimary: customizationData.hatColorPrimary.defaultValue,
+    hatColorSecondary: customizationData.hatColorSecondary.defaultValue,
+    hatColorTertiary: customizationData.hatColorTertiary.defaultValue,
+    mouth: customizationData.mouth.defaultValue,
   },
   reducers: {
     updateData: (state, action) => {
       const payload = action.payload;
-      state.bodyColor = payload.bodyColor;
-      state.hatColor = payload.hatColor;
-      state.hat = payload.hat;
-      state.accessoryColor = payload.accessoryColor;
-      state.accessory = payload.accessory;
-      state.eyewearColor = payload.eyewearColor;
-      state.eyewear = payload.eyewear;
-      state.mouth = payload.mouth;
-      state.finColor = payload.finColor;
-      state.fin = payload.fin;
-      state.effect = payload.effect;
+      const identifier:
+        | "accessory"
+        | "accessoryColorPrimary"
+        | "accessoryColorSecondary"
+        | "accessoryColorTertiary"
+        | "bodyColor"
+        | "effect"
+        | "eyewear"
+        | "eyewearColorPrimary"
+        | "eyewearColorSecondary"
+        | "eyewearColorTertiary"
+        | "fin"
+        | "finColorPrimary"
+        | "finColorSecondary"
+        | "finColorTertiary"
+        | "hat"
+        | "hatColorPrimary"
+        | "hatColorSecondary"
+        | "hatColorTertiary"
+        | "mouth" = payload.identifier;
+      state[identifier] = payload.value;
     },
   },
 });

@@ -13,8 +13,6 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.3.0",
-    "@data-driven-forms/ant-component-mapper": "^3.22.3",
-    "@data-driven-forms/react-form-renderer": "^3.22.3",
     "@reduxjs/toolkit": "^2.1.0",
     "antd": "^5.14.0",
     "react": "^18.2.0",

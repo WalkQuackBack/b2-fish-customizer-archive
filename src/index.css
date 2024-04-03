@@ -31,3 +31,13 @@ body.dark {
   height: 100vh;
   overflow: hidden;
 }
+
+#side_panel_skeleton {
+  background-color: var(--light-2);
+  display: block;
+
+  padding: 24px;
+  max-width: 400px;
+  width: 30%;
+  height: 100%;
+}
