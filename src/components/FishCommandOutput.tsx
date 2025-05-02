@@ -60,7 +60,7 @@ function FishCommandOutput() {
   );
   selectionArray.push("effect:" + fishData.effect);
 
-  const output = "!fish " + selectionArray.join(",");
+  const output = "/fish " + selectionArray.join(",");
   return (
     <>
       <div id="fish_command_output">
